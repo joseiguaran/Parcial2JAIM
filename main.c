@@ -21,7 +21,12 @@ int main(){
 
         case 3:
             int aniosApertura;    
-            aniosApertura=sumarAnios(matriz, tamano);
+	    int recursion;
+     	    int piso;
+    	    printf("Piso ");
+   	    scanf("%d", &piso);
+  	    recursion=tamano[piso-1];
+            aniosApertura=sumarAnios(matriz, recursion,piso);
             printf("El total de Anios de Apertura para locales del piso es:" %d, aniosApertura);
             break;
 
