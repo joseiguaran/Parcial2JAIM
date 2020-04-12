@@ -63,7 +63,7 @@ void anadirUsuario(local_t matriz[][5], int tamano[])
 		}
    
         local_t l;
-        l.nombreLocal=nombre;
+        strcpy(p.nombreLocal, nombre);
         l.pisoLocal=pisoLocal;
         l.numLocalxPiso=numLocalxPiso;
         l.tipoLocal=tip;
