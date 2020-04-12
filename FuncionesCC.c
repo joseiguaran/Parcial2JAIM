@@ -16,7 +16,7 @@ int menu()
     return opcion;
 }
 
-void disponibilidadLocal(matriz, tamano)
+void disponibilidadLocal(local_t matriz[][5], int tamano[])
 {
     printf("El Centro Comercial cuenta con 8 pisos con locales \n");
     for (i = 0; i <8; i=i+1)
