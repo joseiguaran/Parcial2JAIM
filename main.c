@@ -27,7 +27,7 @@ int main(){
    	    scanf("%d", &piso);
   	    recursion=tamano[piso-1];
             aniosAper=sumarAnios(matriz, recursion,piso);
-            printf("El total de Anios de Apertura para locales del piso es:" %d, aniosAper);
+            printf("El total de Anios de Apertura para locales del piso es: %d", aniosAper);
             break;
 
         case 4:
@@ -46,6 +46,7 @@ int main(){
             printf("Opcion no Disponible\n");
             break;
         }
-    } while (option != 0);
-}
+    } while (opcion != 0);
+
 return 0;
+}
