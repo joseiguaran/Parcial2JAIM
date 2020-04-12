@@ -96,10 +96,10 @@ void buscarOficinas(local_t matriz[][5], int tamano[])
     scanf("%d", &tipo);
            if (tipo = 0)
            {
-             tipo_e tip = ALMACEN;
+             tipo_e = ALMACEN;
            }
            else{
-              tipo_e tip = OFICINA;
+              tipo_e = OFICINA;
 	   }
     int i;
     int j;
@@ -108,7 +108,7 @@ void buscarOficinas(local_t matriz[][5], int tamano[])
         for (j = 0; j < tamano[i]; j=j+1)
 	{   
         local_t l = matriz[i][j];
-            if (l.tipoLocal == tip)
+            if (l.tipoLocal == tipo_e)
 	    {
                 printf("Nombre del Local: %s\n ID del local: %d\n Piso del Local: %d\n Numero del Local: %d\n Anio de Apertura: %d\n", l.nombre, l.idLocal, l.pisoLocal, l.numLocalxPiso,l.anioApertura );
             }
