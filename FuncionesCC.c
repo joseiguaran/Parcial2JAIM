@@ -123,3 +123,18 @@ void buscarOficinas(local_t matriz[][5], int tamano[])
         }
     }
 }
+
+void  cambiarNombre(local_t matriz[][5], int tamano[])
+{
+        int piso;
+	int numeroLocal;
+	char nombre[35];
+        printf("Ingrese el piso del local a cambiar\n");
+	scanf("%d", &piso);
+	printf("Ingrese el numero del local a cambiar\n");
+	scanf("%d", &numeroLocal);
+	printf("Ingrese el nuevo nombre\n");
+	scanf("%s", &nombre);
+	matriz[piso - 1][numeroLocal-1].nombre=nombre
+
+}
