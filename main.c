@@ -16,7 +16,7 @@ int main(){
             break;
 
         case 2:
-            anadirLocal(matriz, tamano);
+            anadirUsuario(matriz, tamano);
             break;
 
         case 3:
