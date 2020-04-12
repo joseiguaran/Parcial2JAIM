@@ -135,6 +135,6 @@ void  cambiarNombre(local_t matriz[][5], int tamano[])
 	scanf("%d", &numeroLocal);
 	printf("Ingrese el nuevo nombre\n");
 	scanf("%s", &nombre);
-	matriz[piso - 1][numeroLocal-1].nombre=nombre
+	matriz[piso - 1][numeroLocal-1].nombre=nombre;
 
 }
