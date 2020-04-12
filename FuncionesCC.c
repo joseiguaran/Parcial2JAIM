@@ -69,3 +69,22 @@ void anadirUsuario(local_t matriz[][5], int tamano[])
         printf("El Local seleccionado ya se encuentra ocupado");
         anadirUsuario(local_t matriz[][5], int tamano[]);
 }
+
+int sumarAnios (local_t matriz[][5], int tamano[]){
+    int recursion;
+    int anios=0;
+    int piso;
+    printf("Piso ");
+    scanf("%d", &piso);
+    recursion=tamano[piso-1];
+    if (recursion<0){
+        return 0;
+            
+    }else
+        
+        if (matriz[piso-1][recursion].anioApertura>0){
+             anios=2020- matriz[piso-1][recursion].anioApertura;
+             return anios + sumarAnios(local_t matriz[][5], recursion-1);
+             }
+
+}
