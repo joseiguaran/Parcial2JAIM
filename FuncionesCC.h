@@ -4,12 +4,17 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+typedef enum tipoLocal{
+    ALMACEN, OFICINA
+}tipo_e;
+
 //Local 
 typedef struct Local{
 	char nombreLocal[35];
 	int idLocal; // Calculado automaticamente por su programa
 	int pisoLocal;
 	int numLocalxPiso;//Columnas
+	tipo_e tipoLocal
 	// Completelo con lo que quiera
 } local_t;
 
