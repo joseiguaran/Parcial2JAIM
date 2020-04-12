@@ -7,7 +7,7 @@
 
 typedef enum tipoLocal{
     ALMACEN, OFICINA
-}tipo_e;
+} tipo_e ;
 
 //Local 
 typedef struct Local{
