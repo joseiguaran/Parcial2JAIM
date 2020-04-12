@@ -18,6 +18,11 @@ int menu()
 
 void disponibilidadLocal(matriz, tamano)
 {
+    printf("El Centro Comercial cuenta con 8 pisos con locales \n");
+    for (i = 0; i <8; i=i+1)
+    {
+	printf("En el piso %d se encuentran %d locales vacios\n",(i+1),(5-tamano[i]));
+    }
 }    
 
 void anadirUsuario(local_t matriz[][5], int tamano[])
