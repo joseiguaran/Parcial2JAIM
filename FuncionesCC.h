@@ -14,6 +14,7 @@ typedef struct Local{
 	int idLocal; // Calculado automaticamente por su programa
 	int pisoLocal;
 	int numLocalxPiso;//Columnas
+	int anioApertura;
 	tipo_e tipoLocal
 	// Completelo con lo que quiera
 } local_t;
