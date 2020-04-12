@@ -106,7 +106,7 @@ void buscarOficinas(local_t matriz[][5], int tamano[])
         local_t l = matriz[i][j];
             if (l.tipoLocal == tipo)
 	    {
-                printf("Nombre del Local: %s\n ID del local: %d\n Piso del Local: %d\n Numero del Local: %d\n Anio de Apertura: %d\n", l.nombre, l.idLocal, l.pisoLocal, l.numLocalxPiso,l.anioApertura );
+                printf("Nombre del Local: %s\n ID del local: %d\n Piso del Local: %d\n Numero del Local: %d\n Anio de Apertura: %d\n", l.nombreLocal, l.idLocal, l.pisoLocal, l.numLocalxPiso,l.anioApertura );
             }
         }
     }
@@ -123,6 +123,6 @@ void  cambiarNombre(local_t matriz[][5], int tamano[])
 	scanf("%d", &numeroLocal);
 	printf("Ingrese el nuevo nombre\n");
 	scanf("%s", &nombre);
-	matriz[piso - 1][numeroLocal-1].nombre=nombre;
+	matriz[piso - 1][numeroLocal-1]->nombreLocal=nombre;
 
 }
