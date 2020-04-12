@@ -58,17 +58,17 @@ void anadirUsuario(local_t matriz[][5], int tamano[])
            {
              tipo_e tip = ALMACEN;
            }
-           else  
+           else{  
               tipo_e tip = OFICINA;
+		}
    
         local_t l;
-        strcpy(l.nombre, nombre);
-        strcpy(l.pisoLocal, pisoLocal);
-        strcpy(l.numLocalxPiso, numLocalxPiso);
-	strcpy(l.idLocal, idLocal);
-        strcpy(l.tipoLocal, tip);
-	strcpy(l.anioApertura, anioApertura); 
-	strcpy(l.idLocal,idLocal=1000+(pisoLocal*10)+(numLocalxPiso));
+        l.nombreLocal=nombre;
+        l.pisoLocal=pisoLocal;
+        l.numLocalxPiso=numLocalxPiso;
+        l.tipoLocal=tip;
+	l.anioApertura=anioApertura; 
+	l.idLocal=1000+(pisoLocal*10)+(numLocalxPiso);
         matriz[pisoLocal - 1][numLocalxPiso-1] = l;
         tamano[pisoLocal - 1]= tamano[pisoLocal - 1]+1;
     }
