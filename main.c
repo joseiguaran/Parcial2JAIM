@@ -19,7 +19,7 @@ int main(){
             anadirUsuario(matriz, tamano);
             break;
 
-        case 3:
+        case 3: ;
             int aniosAper;    
 	    int recursion;
      	    int piso;
