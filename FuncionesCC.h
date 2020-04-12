@@ -15,7 +15,7 @@ typedef struct Local{
 	int pisoLocal;
 	int numLocalxPiso;//Columnas
 	int anioApertura;
-	tipo_e tipoLocal
+	tipo_e tipoLocal;
 	// Completelo con lo que quiera
 } local_t;
 
