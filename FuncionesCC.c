@@ -40,7 +40,7 @@ void anadirUsuario(local_t matriz[][5], int tamano[])
     printf("Numero del Local");
     scanf("%d", &numLocalxPiso);
     
-    if (matriz[pisoLocal-1][numLocalxPiso-1].nombre="")
+    if (matriz[pisoLocal-1][numLocalxPiso-1]=NULL)
     {
         printf("Nombre ");
         scanf("%s", &nombre);
