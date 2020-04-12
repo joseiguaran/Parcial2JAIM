@@ -14,5 +14,50 @@ int menu()
     printf("0: Salir\n");
     scanf("%d", &opcion);
     return opcion;
+}
+
+void disponibilidadLocal(matriz, tamano)
+{
+}    
+
+void anadirUsuario(local_t matriz[][5], int tamano[])
+{
+    int idLocal; 
+	int pisoLocal;
+	int numLocalxPiso;
+    char nombre[35];
+
+    printf("Piso del Local ");
+    scanf("%d", &pisoLocal);
     
+    printf("Numero del Local");
+    scanf("%d", &numLocalxPiso);
+    
+    if (matriz[pisoLocal-1][numLocalxPiso-1]=0)
+    {
+        printf("Nombre ");
+        scanf("%s", &nombre);
+
+        printf("Tipo de Local:\n 0-Almacen\n 1-Oficina\n");
+        int tipo;
+        scanf("%d", &tipo);
+    
+           if (tipo = 0)
+           {
+             tipo_e tip = ALMACEN
+           }
+           else  
+              tipo_e tip = OFICINA
+   
+        local_t l;
+        strcpy(l.nombre, nombre);
+        strcpy(l.pisoLocal, pisoLocal);
+        strcpy(l.numLocalxPiso, numLocalxPiso);
+        strcpy(l.tipoLocal, tip);
+        matriz[pisoLocal - 1][numLocalxPiso-1] = l;
+        tamano[pisoLocal - 1]= tamano[pisoLocal - 1]+1;
+    }
+    else
+        printf("El Local seleccionado ya se encuentra ocupado");
+        anadirUsuario(local_t matriz[][5], int tamano[]);
 }
