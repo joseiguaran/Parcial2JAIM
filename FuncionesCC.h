@@ -25,4 +25,12 @@ void mostrarLocal(local_t ** centroComercial, int numPiso,
 		int numLocalxPiso, int numPisos, int numLocalesxPiso);
 
 
+
+int menu();
+void disponibilidadLocal(local_t matriz[][5], int tamano[]);
+void anadirUsuario(local_t matriz[][5], int tamano[]);
+int sumarAnios (local_t matriz[][5], int tamano[]);
+void buscarOficinas(local_t matriz[][5], int tamano[]);
+void  cambiarNombre(local_t matriz[][5], int tamano[]);
+
 #endif /* FUNCIONESCC_H_ */
