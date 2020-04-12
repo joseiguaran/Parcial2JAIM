@@ -22,10 +22,10 @@ void disponibilidadLocal(matriz, tamano)
 
 void anadirUsuario(local_t matriz[][5], int tamano[])
 {
-    int idLocal; 
+    	int idLocal; 
 	int pisoLocal;
 	int numLocalxPiso;
-    char nombre[35];
+  	char nombre[35];
 
     printf("Piso del Local ");
     scanf("%d", &pisoLocal);
@@ -37,6 +37,8 @@ void anadirUsuario(local_t matriz[][5], int tamano[])
     {
         printf("Nombre ");
         scanf("%s", &nombre);
+	    
+	idLocal=1000+(pisoLocal*10)+(numLocalxPiso)
 
         printf("Tipo de Local:\n 0-Almacen\n 1-Oficina\n");
         int tipo;
@@ -53,6 +55,7 @@ void anadirUsuario(local_t matriz[][5], int tamano[])
         strcpy(l.nombre, nombre);
         strcpy(l.pisoLocal, pisoLocal);
         strcpy(l.numLocalxPiso, numLocalxPiso);
+	strcpy(l.idLocal, idLocal);
         strcpy(l.tipoLocal, tip);
         matriz[pisoLocal - 1][numLocalxPiso-1] = l;
         tamano[pisoLocal - 1]= tamano[pisoLocal - 1]+1;
