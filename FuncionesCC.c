@@ -75,21 +75,51 @@ void anadirUsuario(local_t matriz[][5], int tamano[])
         anadirUsuario(local_t matriz[][5], int tamano[]);
 }
 
-int sumarAnios (local_t matriz[][5], int tamano[]){
+int sumarAnios (local_t matriz[][5], int tamano[])
+{
     int recursion;
     int anios=0;
     int piso;
     printf("Piso ");
     scanf("%d", &piso);
     recursion=tamano[piso-1];
-    if (recursion<0){
+    if (recursion<0)
+    {
         return 0;
             
     }else
         
-        if (matriz[piso-1][recursion].anioApertura>0){
+        if (matriz[piso-1][recursion].anioApertura>0)
+	     {
              anios=2020- matriz[piso-1][recursion].anioApertura;
              return anios + sumarAnios(local_t matriz[][5], recursion-1);
              }
 
+}
+
+void buscarOficinas(local_t matriz[][5], int tamano[])
+{
+    printf("Ingrese el Tipo a Buscar:\n 0-Almacen\n 1-Oficina\n");
+    int tipo;
+    scanf("%d", &tipo);
+           if (tipo = 0)
+           {
+             tipo_e tip = ALMACEN
+           }
+           else  
+              tipo_e tip = OFICINA
+
+    int i;
+    int j;
+    for (i = 0; i <8; i=i+1)
+    {
+        for (j = 0; j < tamano[i]; j=j+1)
+	{   
+        local_t l = matriz[i][j];
+            if (l.tipoLocal == tip)
+	    {
+                printf("Nombre del Local: %s\n ID del local: %d\n Piso del Local: %d\n Numero del Local: %d\n Anio de Apertura: %d\n", l.nombre, l.idLocal, l.pisoLocal, l.numLocalxPiso,l.anioApertura );
+            }
+        }
+    }
 }
