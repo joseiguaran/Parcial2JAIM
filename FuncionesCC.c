@@ -84,7 +84,7 @@ int sumarAnios (local_t matriz[][5], int recursion, int piso)
         if (matriz[piso-1][recursion].anioApertura>0)
 	     {
              anios=2020- matriz[piso-1][recursion].anioApertura;
-             return anios + sumarAnios(matriz, recursion-1);
+             return anios + sumarAnios(matriz, recursion-1,piso);
              }
 
 }
@@ -96,11 +96,11 @@ void buscarOficinas(local_t matriz[][5], int tamano[])
     scanf("%d", &tipo);
            if (tipo = 0)
            {
-             tipo_e tip = ALMACEN
+             tipo_e tip = ALMACEN;
            }
-           else  
-              tipo_e tip = OFICINA
-
+           else{
+              tipo_e tip = OFICINA;
+	   }
     int i;
     int j;
     for (i = 0; i <8; i=i+1)
