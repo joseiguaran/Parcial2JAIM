@@ -45,11 +45,7 @@ void anadirUsuario(local_t matriz[][5], int tamano[])
 	    
 	printf("Anio de Apertura ");
         scanf("%s", &anioApertura);
-	    
-	
-
-        
-   
+	     
         local_t l;
         printf("Nombre ");
 	scanf("%s",matriz[pisoLocal - 1][numLocalxPiso-1].nombreLocal);
@@ -72,7 +68,7 @@ void anadirUsuario(local_t matriz[][5], int tamano[])
     }
     else{
         printf("El Local seleccionado ya se encuentra ocupado");
-        anadirUsuario(local_t matriz[][5], int tamano[]);
+        anadirUsuario(matriz, tamano);
         }
 }
 
