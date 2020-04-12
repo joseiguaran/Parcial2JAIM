@@ -18,6 +18,7 @@ int menu()
 
 void disponibilidadLocal(local_t matriz[][5], int tamano[])
 {
+    int i;
     printf("El Centro Comercial cuenta con 8 pisos con locales \n");
     for (i = 0; i <8; i=i+1)
     {
@@ -47,7 +48,7 @@ void anadirUsuario(local_t matriz[][5], int tamano[])
 	printf("Anio de Apertura ");
         scanf("%s", &anioApertura);
 	    
-	idLocal=1000+(pisoLocal*10)+(numLocalxPiso)
+	
 
         printf("Tipo de Local:\n 0-Almacen\n 1-Oficina\n");
         int tipo;
@@ -55,10 +56,10 @@ void anadirUsuario(local_t matriz[][5], int tamano[])
     
            if (tipo = 0)
            {
-             tipo_e tip = ALMACEN
+             tipo_e tip = ALMACEN;
            }
            else  
-              tipo_e tip = OFICINA
+              tipo_e tip = OFICINA;
    
         local_t l;
         strcpy(l.nombre, nombre);
@@ -66,7 +67,8 @@ void anadirUsuario(local_t matriz[][5], int tamano[])
         strcpy(l.numLocalxPiso, numLocalxPiso);
 	strcpy(l.idLocal, idLocal);
         strcpy(l.tipoLocal, tip);
-	strcpy(l.anioApertura, anioApertura);    
+	strcpy(l.anioApertura, anioApertura); 
+	strcpy(l.idLocal,idLocal=1000+(pisoLocal*10)+(numLocalxPiso));
         matriz[pisoLocal - 1][numLocalxPiso-1] = l;
         tamano[pisoLocal - 1]= tamano[pisoLocal - 1]+1;
     }
