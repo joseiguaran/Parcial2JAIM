@@ -32,7 +32,7 @@ void anadirUsuario(local_t matriz[][5], int tamano[])
 	int pisoLocal;
 	int anioApertura;
 	int numLocalxPiso;
-  	char nombre[35];
+  
 
     printf("Piso del Local ");
     scanf("%d", &pisoLocal);
@@ -42,8 +42,6 @@ void anadirUsuario(local_t matriz[][5], int tamano[])
     
     if (matriz[pisoLocal-1][numLocalxPiso-1].anioApertura=0)
     {
-        printf("Nombre ");
-        scanf("%s", &nombre);
 	    
 	printf("Anio de Apertura ");
         scanf("%s", &anioApertura);
@@ -63,7 +61,8 @@ void anadirUsuario(local_t matriz[][5], int tamano[])
 		}
    
         local_t l;
-        strcpy(l.nombreLocal, nombre);
+        printf("Nombre ");
+	scanf("%s",matriz[pisoLocal - 1][numLocalxPiso-1].nombreLocal);
         l.pisoLocal=pisoLocal;
         l.numLocalxPiso=numLocalxPiso;
         l.tipoLocal=tip;
