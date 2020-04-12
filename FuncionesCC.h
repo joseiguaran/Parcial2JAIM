@@ -30,7 +30,7 @@ void mostrarLocal(local_t ** centroComercial, int numPiso,
 int menu();
 void disponibilidadLocal(local_t matriz[][5], int tamano[]);
 void anadirUsuario(local_t matriz[][5], int tamano[]);
-int sumarAnios (local_t matriz[][5], int tamano[]);
+int sumarAnios (local_t matriz[][5], int recursion, int piso);
 void buscarOficinas(local_t matriz[][5], int tamano[]);
 void  cambiarNombre(local_t matriz[][5], int tamano[]);
 
