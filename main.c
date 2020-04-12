@@ -3,8 +3,8 @@
 
 int main(){
 	
-   local_t matriz[12][5];
-    int tamano[12] = {};
+   local_t matriz[8][5];
+    int tamano[8] = {};
     int opcion=0;
     do{
         opcion = menu();
