@@ -72,14 +72,9 @@ void anadirUsuario(local_t matriz[][5], int tamano[])
         }
 }
 
-int sumarAnios (local_t matriz[][5], int tamano[])
+int sumarAnios (local_t matriz[][5], int recursion, int piso)
 {
-    int recursion;
     int anios=0;
-    int piso;
-    printf("Piso ");
-    scanf("%d", &piso);
-    recursion=tamano[piso-1];
     if (recursion<0)
     {
         return 0;
