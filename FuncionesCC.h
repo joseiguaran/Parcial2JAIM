@@ -3,6 +3,7 @@
 #define FUNCIONESCC_H_
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 
 typedef enum tipoLocal{
     ALMACEN, OFICINA
