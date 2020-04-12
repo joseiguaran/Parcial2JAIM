@@ -48,32 +48,32 @@ void anadirUsuario(local_t matriz[][5], int tamano[])
 	    
 	
 
-        printf("Tipo de Local:\n 0-Almacen\n 1-Oficina\n");
-        int tipo;
-        scanf("%d", &tipo);
-    
-           if (tipo = 0)
-           {
-             tipo_e tip = ALMACEN;
-           }
-           else{  
-              tipo_e tip = OFICINA;
-		}
+        
    
         local_t l;
         printf("Nombre ");
 	scanf("%s",matriz[pisoLocal - 1][numLocalxPiso-1].nombreLocal);
         l.pisoLocal=pisoLocal;
         l.numLocalxPiso=numLocalxPiso;
-        l.tipoLocal=tipo_e tip;
+	    printf("Tipo de Local:\n 0-Almacen\n 1-Oficina\n");
+        int tipo;
+        scanf("%d", &tipo);
+    
+           if (tipo = 0){
+            l.tipoLocal= ALMACEN;
+                        }
+           else{  
+              l.tipoLocal= OFICINA;
+	        }
 	l.anioApertura=anioApertura; 
 	l.idLocal=1000+(pisoLocal*10)+(numLocalxPiso);
         matriz[pisoLocal - 1][numLocalxPiso-1] = l;
         tamano[pisoLocal - 1]= tamano[pisoLocal - 1]+1;
     }
-    else
+    else{
         printf("El Local seleccionado ya se encuentra ocupado");
         anadirUsuario(local_t matriz[][5], int tamano[]);
+        }
 }
 
 int sumarAnios (local_t matriz[][5], int tamano[])
