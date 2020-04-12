@@ -125,3 +125,6 @@ void  cambiarNombre(local_t matriz[][5], int tamano[])
 	scanf("%s",matriz[piso - 1][numeroLocal-1].nombreLocal);
 
 }
+void   vaciarLocal(local_t matriz[][5], int tamano[]);
+{
+}
