@@ -65,7 +65,7 @@ void anadirUsuario(local_t matriz[][5], int tamano[])
 	scanf("%s",matriz[pisoLocal - 1][numLocalxPiso-1].nombreLocal);
         l.pisoLocal=pisoLocal;
         l.numLocalxPiso=numLocalxPiso;
-        l.tipoLocal=tip;
+        l.tipoLocal=tipo_e tip;
 	l.anioApertura=anioApertura; 
 	l.idLocal=1000+(pisoLocal*10)+(numLocalxPiso);
         matriz[pisoLocal - 1][numLocalxPiso-1] = l;
