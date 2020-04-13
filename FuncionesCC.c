@@ -15,11 +15,12 @@ int menu()
     scanf("%d", &opcion);
     return opcion;
 }		
-local_t** iniciarMatriz(int fila, int col)
+local_t** iniciarMatriz(int fila, int col, tamano[])
 {
     local_t** matriz = malloc(sizeof(local_t*) * fila);
     int i;
     int j;
+    int h;
     for(i = 0; i < fila; i=i+1)
     {
         matriz[i] = malloc(sizeof(local_t) * col);
@@ -27,7 +28,8 @@ local_t** iniciarMatriz(int fila, int col)
             matriz[i][j].anioApertura = 0;
 	    matriz[i][j].tipoLocal = 0;
     }
-
+	for(h=0;h<fila;h++)
+		tamano[h]=0;
     return matriz;
 }
 
