@@ -11,7 +11,7 @@ int main(){
 	
 	local_t** matriz = iniciarMatriz(fila, col);
 	
-	int tamano[fila] = {};
+	int tamano[fila];
 	int opcion=0;
    
 do{
