@@ -30,7 +30,7 @@ local_t** iniciarMatriz(int fila, int col)
     return matriz;
 }
 
-void disponibilidadLocal(local_t matriz[][col], int tamano[], int fila, int col)
+void disponibilidadLocal(local_t matriz[][], int tamano[], int fila, int col)
 {
     int i;
     for (i = 0; i <fila; i=i+1)
