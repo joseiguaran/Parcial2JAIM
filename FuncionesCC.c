@@ -15,7 +15,7 @@ int menu()
     scanf("%d", &opcion);
     return opcion;
 }		
-local_t** iniciarMatriz(int fila, int col, tamano[])
+local_t** iniciarMatriz(int fila, int col,int tamano[])
 {
     local_t** matriz = malloc(sizeof(local_t*) * fila);
     int i;
