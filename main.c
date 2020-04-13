@@ -10,7 +10,7 @@ int main(){
 	scanf("%d", &col);
 	
 	int tamano[fila];
-	local_t** matriz = iniciarMatriz(fila, col, tamano[]);
+	local_t** matriz = iniciarMatriz(fila, col, tamano);
 	
 	
 	int opcion=0;
