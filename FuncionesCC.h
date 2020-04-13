@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-
+// Enum que contiene el tipo de local
 typedef enum tipoLocal{
     ALMACEN, OFICINA
 } tipo_e ;
@@ -21,11 +21,7 @@ typedef struct Local{
 } local_t;
 
 
-/*Agregar las funciones que necesite para satisfacer los requerimientos */
-void mostrarLocal(local_t ** centroComercial, int numPiso,
-		int numLocalxPiso, int numPisos, int numLocalesxPiso);
-
-
+// Operaciones disponibles en el programa (Cada una explicada en el archivo.c)
 
 int menu();
 local_t** iniciarMatriz(int fila, int col, int tamano[]);
