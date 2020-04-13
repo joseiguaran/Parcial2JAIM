@@ -9,9 +9,10 @@ int main(){
 	printf("Ingrese el numero de locales por piso del centro comercial: ");
 	scanf("%d", &col);
 	
-	local_t** matriz = iniciarMatriz(fila, col);
-	
 	int tamano[fila];
+	local_t** matriz = iniciarMatriz(fila, col, tamano[]);
+	
+	
 	int opcion=0;
    
 do{
