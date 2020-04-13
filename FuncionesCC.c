@@ -144,4 +144,12 @@ void  cambiarNombre(local_t **matriz, int tamano[], int col)
 }
 void   vaciarLocal(local_t **matriz, int tamano[])
 {
-}
+int piso;
+int numeroLocal;
+        printf("Piso del local a Borrar: ");
+        scanf("%d", &piso);
+        printf("Numero del Local a Borrar: ");
+        scanf("%d", &numeroLocal);
+	matriz[piso][numeroLocal].anioApertura = 0;
+}	
+	
