@@ -3,10 +3,18 @@
 
 int main(){
 	
-   local_t matriz[8][5];
-    int tamano[8] = {};
-    int opcion=0;
-    do{
+	int fila, col;
+	printf("Ingrese el numero de pisos del centro comercial: ");
+	scanf("%d", &fila);
+	printf("Ingrese el numero de locales por piso del centro comercial: ");
+	scanf("%d", &col);
+	
+	local_t** matriz = iniciarMatriz(fil, col);
+	
+	int tamano[fila] = {};
+	int opcion=0;
+   
+do{
         opcion = menu();
         
         switch (opcion)
