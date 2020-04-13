@@ -14,19 +14,32 @@ int menu()
     printf("0: Salir\n");
     scanf("%d", &opcion);
     return opcion;
+			
+local_t** iniciarMatriz(int fila, int col)
+{
+    local_t** matriz = malloc(sizeof(local_t*) * fila);
+    int i;
+    int j;
+    for(i = 0; i < fila; i=i+1)
+    {
+        matriz[i] = malloc(sizeof(local_t) * col);
+        for (j = 0; j < col; j=j+1)
+            matriz[i][j].anioApertura = 0;
+    }
+
+    return matriz;
 }
 
-void disponibilidadLocal(local_t matriz[][5], int tamano[])
+void disponibilidadLocal(local_t matriz[][col], int tamano[], int fila, int col)
 {
     int i;
-    printf("El Centro Comercial cuenta con 8 pisos con locales \n");
-    for (i = 0; i <8; i=i+1)
+    for (i = 0; i <fila; i=i+1)
     {
-	printf("En el piso %d se encuentran %d locales vacios\n",(i+1),(5-tamano[i]));
+	printf("En el piso %d se encuentran %d locales vacios\n",(i+1),(col-tamano[i]));
     }
 }    
 
-void anadirUsuario(local_t matriz[][5], int tamano[])
+void anadirUsuario(local_t matriz[][col], int tamano[], int col)
 {
     	int idLocal; 
 	int pisoLocal;
@@ -40,7 +53,7 @@ void anadirUsuario(local_t matriz[][5], int tamano[])
     printf("Numero del Local");
     scanf("%d", &numLocalxPiso);
     
-    if (matriz[pisoLocal-1][numLocalxPiso-1].anioApertura=)
+    if (matriz[pisoLocal-1][numLocalxPiso-1].anioApertura=0)
     {
 	    
 	printf("Anio de Apertura ");
@@ -72,7 +85,7 @@ void anadirUsuario(local_t matriz[][5], int tamano[])
         }
 }
 
-int sumarAnios (local_t matriz[][5], int recursion, int piso)
+int sumarAnios (local_t matriz[][col], int recursion, int piso, int col)
 {
     int anios=0;
     if (recursion<0)
@@ -89,7 +102,7 @@ int sumarAnios (local_t matriz[][5], int recursion, int piso)
 
 }
 
-void buscarOficinas(local_t matriz[][5], int tamano[])
+void buscarOficinas(local_t matriz[][col], int tamano[], int fila, int col)
 {
     printf("Ingrese el Tipo a Buscar:\n 0-Almacen\n 1-Oficina\n");
     int tipo;
@@ -99,7 +112,7 @@ void buscarOficinas(local_t matriz[][5], int tamano[])
 	 
     int i;
     int j;
-    for (i = 0; i <8; i=i+1)
+    for (i = 0; i <fila; i=i+1)
     {
         for (j = 0; j < tamano[i]; j=j+1)
 	{   
@@ -112,7 +125,7 @@ void buscarOficinas(local_t matriz[][5], int tamano[])
     }
 }
 
-void  cambiarNombre(local_t matriz[][5], int tamano[])
+void  cambiarNombre(local_t matriz[][col], int tamano[], int col)
 {
         int piso;
 	int numeroLocal;
