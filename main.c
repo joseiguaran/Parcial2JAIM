@@ -9,7 +9,7 @@ int main(){
 	printf("Ingrese el numero de locales por piso del centro comercial: ");
 	scanf("%d", &col);
 	
-	local_t** matriz = iniciarMatriz(fil, col);
+	local_t** matriz = iniciarMatriz(fila, col);
 	
 	int tamano[fila] = {};
 	int opcion=0;
@@ -20,11 +20,11 @@ do{
         switch (opcion)
         {
         case 1:
-            disponibilidadLocal(matriz, tamano);
+            disponibilidadLocal(matriz, tamano,fila,col);
             break;
 
         case 2:
-            anadirUsuario(matriz, tamano);
+            anadirUsuario(matriz, tamano,col);
             break;
 
         case 3: ;
@@ -34,16 +34,16 @@ do{
     	    printf("Piso ");
    	    scanf("%d", &piso);
   	    recursion=tamano[piso-1];
-            aniosAper=sumarAnios(matriz, recursion,piso);
+            aniosAper=sumarAnios(matriz, recursion,piso,col);
             printf("El total de Anios de Apertura para locales del piso es: %d", aniosAper);
             break;
 
         case 4:
-            buscarOficinas(matriz, tamano);
+            buscarOficinas(matriz, tamano,fila,col);
             break;
 	
 	case 5:
-            cambiarNombre(matriz, tamano);
+            cambiarNombre(matriz, tamano,col);
             break;
 			
 	case 6:
