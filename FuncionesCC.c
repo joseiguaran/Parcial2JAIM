@@ -53,7 +53,7 @@ void anadirUsuario(local_t **matriz, int tamano[], int col)
     printf("Numero del Local");
     scanf("%d", &numLocalxPiso);
     
-    if (matriz[pisoLocal-1][numLocalxPiso-1].anioApertura=0)
+    if ((matriz[pisoLocal-1][numLocalxPiso-1].anioApertura)==0)
     {
 	    
 	printf("Anio de Apertura ");
