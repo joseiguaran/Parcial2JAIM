@@ -2,6 +2,7 @@
 
 int menu()
 {
+	//Menu con todas las opciones del usuario
     int opcion;
     printf("BIENVENIDO AL SISTEMA DE LOCALES \n");
     printf("Seleccione la opcion \n");
@@ -14,7 +15,8 @@ int menu()
     printf("0: Salir\n");
     scanf("%d", &opcion);
     return opcion;
-}		
+}
+//operacion para iniciar la matriz con valor 0 en anios de apertura
 local_t** iniciarMatriz(int fila, int col,int tamano[])
 {
     local_t** matriz = malloc(sizeof(local_t*) * fila);
@@ -22,26 +24,29 @@ local_t** iniciarMatriz(int fila, int col,int tamano[])
     int j;
     int h;
     for(i = 0; i < fila; i=i+1)
+	    //Operacion para reserva de memoria dinamica
     {
         matriz[i] = malloc(sizeof(local_t) * col);
         for (j = 0; j < col; j=j+1)
             matriz[i][j].anioApertura = 0;
 	    matriz[i][j].tipoLocal = 0;
     }
+	// Operacion para iniciar todos los valores del array tamano en 0
 	for(h=0;h<fila;h++)
 		tamano[h]=0;
     return matriz;
 }
-
+// Operacion para verificar el numero de locales disponibles
 void disponibilidadLocal(local_t **matriz, int tamano[], int fila, int col)
 {
     int i;
     for (i = 0; i <fila; i=i+1)
     {
+	    // Se resta col que contiene la capacidad de locales con tamano que es el contador de locales usados
 	printf("En el piso %d se encuentran %d locales vacios\n",(i+1),(col-tamano[i]));
     }
 }    
-
+// Operacion para anadir un local nuevo
 void anadirUsuario(local_t **matriz, int tamano[], int col)
 {
     	int idLocal; 
@@ -55,7 +60,7 @@ void anadirUsuario(local_t **matriz, int tamano[], int col)
     
     printf("Numero del Local");
     scanf("%d", &numLocalxPiso);
-    
+    // revisa que no exista un local en esa posicion
     if ((matriz[pisoLocal-1][numLocalxPiso-1].anioApertura)==0)
     {
 	    
@@ -70,7 +75,7 @@ void anadirUsuario(local_t **matriz, int tamano[], int col)
 	    printf("Tipo de Local:\n 1-Almacen\n 2-Oficina\n");
         int tipo;
         scanf("%d", &tipo);
-    
+    // Establece el tipo de Local
            if (tipo = 1){
             l.tipoLocal= ALMACEN;
                         }
@@ -83,12 +88,14 @@ void anadirUsuario(local_t **matriz, int tamano[], int col)
         tamano[pisoLocal - 1]= tamano[pisoLocal - 1]+1;
     }
     else{
+	    // Operacion en caso de que ya exista un local enesas coodernadas
         printf("El Local seleccionado ya se encuentra ocupado\n");
 	    printf("%d\n",matriz[pisoLocal][numLocalxPiso].anioApertura);
+	    // Inicia nuevamente la operacion principal hasta que se encuentre un local vacio
         anadirUsuario(matriz, tamano, col);
         }
 }
-
+// Operacion para suma de anios de apertura
 int sumarAnios (local_t **matriz, int recursion, int piso, int col)
 {
     int anios=0;
@@ -97,15 +104,16 @@ int sumarAnios (local_t **matriz, int recursion, int piso, int col)
         return 0;
             
     }else
-        
+        // Se asegura que exista por lo menos un local restante por sumar
         if (matriz[piso-1][recursion].anioApertura>0)
 	     {
+		// Se establece que el anio actual es 2020
              anios=2020- matriz[piso-1][recursion].anioApertura;
              return anios + sumarAnios(matriz, recursion-1,piso, col);
              }
 
 }
-
+// Operacion que busca todos los locales por tipo
 void buscarOficinas(local_t **matriz, int tamano[], int fila, int col)
 {
     printf("Ingrese el Tipo a Buscar:\n 1-Almacen\n 2-Oficina\n");
@@ -116,6 +124,7 @@ void buscarOficinas(local_t **matriz, int tamano[], int fila, int col)
 	 
     int i;
     int j;
+	// Ciclo que recorre cada columna de cada fila de la matriz
     for (i = 0; i <fila; i=i+1)
     {
         for (j = 0; j < tamano[i]; j=j+1)
@@ -128,7 +137,7 @@ void buscarOficinas(local_t **matriz, int tamano[], int fila, int col)
         }
     }
 }
-
+// Operacion que cambia el nombre a un local
 void  cambiarNombre(local_t **matriz, int tamano[], int col)
 {
         int piso;
@@ -139,9 +148,11 @@ void  cambiarNombre(local_t **matriz, int tamano[], int col)
 	printf("Ingrese el numero del local a cambiar\n");
 	scanf("%d", &numeroLocal);
 	printf("Ingrese el nuevo nombre\n");
+	// Reemplaza el nombre anterio por el suministrado por el usuario
 	scanf("%s",matriz[piso - 1][numeroLocal-1].nombreLocal);
 
 }
+// Operacion que borra los datos de un local
 void   vaciarLocal(local_t **matriz, int tamano[])
 {
 int piso;
@@ -150,6 +161,7 @@ int numeroLocal;
         scanf("%d", &piso);
         printf("Numero del Local a Borrar: ");
         scanf("%d", &numeroLocal);
+	// Reestablece el valo criterio de la operacion anadirUsuario a 0 para que pueda ser usado.
 	matriz[piso][numeroLocal].anioApertura = 0;
 }	
 	
