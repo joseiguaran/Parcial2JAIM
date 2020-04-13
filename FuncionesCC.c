@@ -80,7 +80,8 @@ void anadirUsuario(local_t **matriz, int tamano[], int col)
         tamano[pisoLocal - 1]= tamano[pisoLocal - 1]+1;
     }
     else{
-        printf("El Local seleccionado ya se encuentra ocupado");
+        printf("El Local seleccionado ya se encuentra ocupado\n");
+	    printf("%d\n",matriz[i][j].anioApertura);
         anadirUsuario(matriz, tamano, col);
         }
 }
