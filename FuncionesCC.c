@@ -14,7 +14,7 @@ int menu()
     printf("0: Salir\n");
     scanf("%d", &opcion);
     return opcion;
-			
+}		
 local_t** iniciarMatriz(int fila, int col)
 {
     local_t** matriz = malloc(sizeof(local_t*) * fila);
@@ -81,7 +81,7 @@ void anadirUsuario(local_t **matriz, int tamano[], int col)
     }
     else{
         printf("El Local seleccionado ya se encuentra ocupado");
-        anadirUsuario(matriz, tamano);
+        anadirUsuario(matriz, tamano, col);
         }
 }
 
@@ -97,7 +97,7 @@ int sumarAnios (local_t **matriz, int recursion, int piso, int col)
         if (matriz[piso-1][recursion].anioApertura>0)
 	     {
              anios=2020- matriz[piso-1][recursion].anioApertura;
-             return anios + sumarAnios(matriz, recursion-1,piso);
+             return anios + sumarAnios(matriz, recursion-1,piso, col);
              }
 
 }
