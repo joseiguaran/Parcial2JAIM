@@ -25,6 +25,7 @@ local_t** iniciarMatriz(int fila, int col)
         matriz[i] = malloc(sizeof(local_t) * col);
         for (j = 0; j < col; j=j+1)
             matriz[i][j].anioApertura = 0;
+	    matriz[i][j].tipoLocal = -1;
     }
 
     return matriz;
