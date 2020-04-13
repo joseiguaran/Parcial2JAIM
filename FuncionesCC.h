@@ -28,11 +28,12 @@ void mostrarLocal(local_t ** centroComercial, int numPiso,
 
 
 int menu();
-void disponibilidadLocal(local_t matriz[][5], int tamano[]);
-void anadirUsuario(local_t matriz[][5], int tamano[]);
-int sumarAnios (local_t matriz[][5], int recursion, int piso);
-void buscarOficinas(local_t matriz[][5], int tamano[]);
-void  cambiarNombre(local_t matriz[][5], int tamano[]);
-void   vaciarLocal(local_t matriz[][5], int tamano[]);
+local_t** iniciarMatriz(int fila, int col);
+void disponibilidadLocal(local_t **matriz, int tamano[], int fila, int col);
+void anadirUsuario(local_t **matriz, int tamano[], int col);
+int sumarAnios (local_t **matriz, int recursion, int piso, int col);
+void buscarOficinas(local_t **matriz, int tamano[], int fila, int col);
+void  cambiarNombre(local_t **matriz, int tamano[], int col);
+void   vaciarLocal(local_t **matriz, int tamano[]);
 
 #endif /* FUNCIONESCC_H_ */
