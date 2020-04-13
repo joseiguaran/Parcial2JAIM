@@ -25,7 +25,7 @@ local_t** iniciarMatriz(int fila, int col)
         matriz[i] = malloc(sizeof(local_t) * col);
         for (j = 0; j < col; j=j+1)
             matriz[i][j].anioApertura = 0;
-	    matriz[i][j].tipoLocal = -1;
+	    matriz[i][j].tipoLocal = 0;
     }
 
     return matriz;
@@ -62,17 +62,17 @@ void anadirUsuario(local_t **matriz, int tamano[], int col)
 	     
         local_t l;
         printf("Nombre ");
-	scanf("%s",matriz[pisoLocal - 1][numLocalxPiso-1].nombreLocal);
+	scanf("%35s",matriz[pisoLocal - 1][numLocalxPiso-1].nombreLocal);
         l.pisoLocal=pisoLocal;
         l.numLocalxPiso=numLocalxPiso;
-	    printf("Tipo de Local:\n 0-Almacen\n 1-Oficina\n");
+	    printf("Tipo de Local:\n 1-Almacen\n 2-Oficina\n");
         int tipo;
         scanf("%d", &tipo);
     
-           if (tipo = 0){
+           if (tipo = 1){
             l.tipoLocal= ALMACEN;
                         }
-           else{  
+           if (tipo=2) {  
               l.tipoLocal= OFICINA;
 	        }
 	l.anioApertura=anioApertura; 
@@ -106,7 +106,7 @@ int sumarAnios (local_t **matriz, int recursion, int piso, int col)
 
 void buscarOficinas(local_t **matriz, int tamano[], int fila, int col)
 {
-    printf("Ingrese el Tipo a Buscar:\n 0-Almacen\n 1-Oficina\n");
+    printf("Ingrese el Tipo a Buscar:\n 1-Almacen\n 2-Oficina\n");
     int tipo;
  
     scanf("%d", &tipo);
